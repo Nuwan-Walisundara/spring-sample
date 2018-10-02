@@ -12,6 +12,9 @@ public class Application {
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 		CustomerService service = context.getBean("customerService", CustomerService.class);
+//		System.out.println(service);
+		CustomerService service2 = context.getBean("customerService", CustomerService.class);
+//		System.out.println(service2);
 		System.out.println(service.findAll().get(0).getFirstName());
 	}
 
